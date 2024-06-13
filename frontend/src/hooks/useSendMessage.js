@@ -2,7 +2,7 @@ import toast from "react-hot-toast";
 import useConversation from "../zustand/useConversation";
 import { useState } from "react";
 
-const sendMessage = () => {
+const useSendMessage = () => {
     const [loading, setLoading] = useState(false); // Initial loading state set to false
     const { messages, setMessages, selectedConversation } = useConversation();
 
@@ -35,4 +35,4 @@ const sendMessage = () => {
     return { sendMessage, loading }; // Return sendMessage function and loading state
 };
 
-export default sendMessage;
+export default useSendMessage;
